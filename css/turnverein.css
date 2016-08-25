@@ -1,0 +1,316 @@
+
+html,
+body {
+	margin: 0px;
+	color: #333;
+	background: #eee;
+	font: sans-serif;
+	font-size: 15px;
+}
+
+body {
+	padding: 0px;
+}
+
+#page-content {
+	padding: 50px 0px;
+	background: #fff;
+	z-index: 0;
+}
+
+/*
+====================
+MENU STYLE
+====================
+*/
+
+
+#smallscreen-head {
+	position: fixed;
+	top: -60px;
+
+	font-size: 200%;
+
+	color: #ddd;
+	background: #222;
+	z-index: 50;
+	width: 100%;
+
+	padding: 10px;
+
+	font-size: 150%;
+
+}
+
+#sidetoggler {
+	display: none;
+}
+
+.menu-hauptmenue-container {
+	z-index: 45;
+
+	background: #222;
+	text-align: center;
+	margin: 0px;
+	position: fixed;
+	width: 100%;
+	border: 0px;
+}
+
+.menu {
+	margin: 0px 0px;
+	padding: 0px;
+	height: auto;
+	border: 0px;
+}
+
+.menu-item {
+	display: inline-block;
+	padding: 10px 0px;
+	text-align: center;
+	border: 0px;
+}
+
+.menu-item a {
+	background: #333;
+	border: 0px;
+	color: #eee;
+	padding: 10px 12px;
+	font-family: sans-serif;
+	text-transform: uppercase;
+	text-decoration: none;
+}
+
+.menu-item a:hover {
+	background: #eee;
+	color: #333;
+}
+
+.current-menu-item a {
+	background: #eee;
+	color: #333;
+}
+
+@media ( max-width: 600px ) {
+
+	.menu-hauptmenue-container {
+		width: 60%;
+		height: 100%;
+		position: fixed;
+		top: 0px;
+		left: 0px;
+
+		-ms-transform: translateX( -100% );
+		-webkit-transform: translateX( -100% );
+		-o-transform: translateX( -100% );
+		transform: translateX( -100% );
+
+		-ms-transition-duration: 0.5s;
+		-webkit-transition-duration: 0.5s;
+		-o-transition-duration: 0.5s;
+		transition-duration: 0.5s;
+	}
+
+	#sidetoggler:checked + .menu-hauptmenue-container {
+		-ms-transform: translateX( 0px );
+		-webkit-transform: translateX( 0px );
+		-o-transform: translateX( 0px );
+		transform: translateX( 0px );
+	}
+
+
+
+	.menu-item {
+		display: block;
+		text-align: left;
+		padding: 0px
+	}
+
+	.menu-item:first-of-type {
+		margin-top: 80px;
+	}
+
+	.menu-item a {
+		display: block;
+		border-bottom: 1px solid #eee;
+		font-size: 100%;
+	}
+
+	#smallscreen-head {
+		top: 0px;
+		border-bottom: 2px solid #eee;
+	}
+
+	#smallscreen-head label {
+		padding: 15px 80px 15px 10px;
+	}
+}
+
+/*
+========================
+LOCAL NAVIGATION STYLE
+========================
+*/
+
+.table-of-contents {
+	position: relative;
+	z-index: 1;
+}
+
+.localnav {
+	display: block;
+	margin: 15px 0px;
+	z-index: 2;
+	position: relative;
+
+	-ms-transition-duration: 0.1s;
+	-webkit-transition-duration: 0.1s;
+	-o-transition-duration: 0.1s;
+	transition-duration: 0.1s;
+
+	text-decoration: none;
+	font-family: helvetica, sans-serif;
+	font-size: 11pt;
+	text-transform: uppercase;
+	color: black;
+}
+
+.localnav:first-of-type {
+	margin-top: 35px;
+}
+
+.localnav::before {
+	content: "//  ";
+}
+
+@media ( max-width: 700px ) {
+	.table-of-contents {
+		position: absolute;
+		width: 1px;
+		height: 1px;
+		margin-left: -5000px;
+		overflow: hidden;
+	}
+
+}
+/*
+===================
+TITELBILD STYLE
+===================
+*/
+
+.header-bild-container {
+	display: block;
+	width: 100%;
+	overflow: hidden;
+	height: 230px;
+	padding-top: 20px;
+	margin-bottom: 20px;
+}
+
+@media ( max-width: 967px ) {
+	.header-bild-container {
+		padding-top: 50px;
+		height: 200px;
+	}
+}
+
+.header-bild-container img {
+	width: 100%;
+	height: auto;
+	margin: auto;
+}
+
+/*
+=================
+KALENDER STYLE
+=================
+*/
+
+.widget-rechts {
+	font-family: helvetica, sans-serif;
+}
+
+.widget-rechts h1 {
+	padding-top: 15px;
+	font-size: 140%;
+
+}
+
+.widget-rechts ul {
+	list-style: none;
+	padding: 0px;
+
+	font-size: 80%;
+}
+
+.widget-rechts p {
+	padding: 0px;
+	margin: 5px 0px;
+}
+/*
+====================
+PAGE MAIN STYLE
+====================
+*/
+
+h1, h2, h3, h4, h5, h6 {
+	font-family: helvetica, sans-serif;
+	font-size: 15pt;
+}
+
+.page-content h1 {
+	margin-top: 15px;
+	padding-top: 55px;
+	font-size: 200%;
+}
+
+.page-content h1:first-of-type {
+	margin-top: -30px;
+}
+
+@media ( max-width: 967px ) {
+
+	.page-content h1:first-of-type {
+		padding-top: 80px;
+		margin-top: -55px;
+	}
+
+}
+
+h2 {
+	font-weight: bolder;
+	font-size: 140%;
+}
+
+h3 {
+	font-weight: 100;
+	font-size: 100%;
+}
+
+.grid-container {
+	margin: 0px 20px;
+}
+
+.box {
+	border-radius: 2px;
+	padding: 0px;
+	margin-bottom: 10px;
+}
+
+.blog-wrapper {
+	margin-bottom: 60px;
+}
+
+/*
+==================
+PAGE BOTTOM STYLE
+==================
+*/
+
+.page-bottom {
+	min-height: 150px;
+	background: #333;
+
+	color: white;
+}
