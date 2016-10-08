@@ -308,9 +308,33 @@ PAGE BOTTOM STYLE
 ==================
 */
 
-.page-bottom {
-	min-height: 150px;
+.bottomline {
 	background: #333;
 
 	color: white;
+
+	padding-bottom: 30px;
+	padding-top: 30px;
+}
+
+.contact-area {
+	min-height: 100px;
+
+	background-color: #444;
+}
+
+.contact-area h1 {
+
+	font-family: helvetica, sans-serif;
+
+	font-size: 80%;
+
+	font-weight: normal;
+
+	text-transform: uppercase;
+
+}
+
+.widget-unten {
+
 }

@@ -54,18 +54,6 @@ SIDEBAR FUNCTION
 
  function tvf_widget_setup() {
 
-  // register_sidebar(
-  // 		array(
- // 			'name'					=>	'Inhaltsnavigation',
- // 			'id'						=>	'table-of-contents-widget',
- // 			'class'					=>	'toc-wid',
- // 			'description'		=>	'Dieses Widget sollte mit dem ToC-Widget besetz werden.',
- // 			'before_widget'	=>	'<aside id="%1$s" class="widget %2$s">',
- // 			'after_widget'	=>	'</aside>',
- // 			'before_title'	=>	'<h1 class="widget-title">',
- // 			'after_title'		=>	'</h1>'
- // 		)
-  // );
 
 	register_sidebar(
 			array(
@@ -168,7 +156,7 @@ SIDEBAR FUNCTION
 			'id'						=>	'bottomline-1',
 			'class'					=>	'custom-wid',
 			'description'		=>	'Dieses Widget erscheint ganz unten an der Seite und wird für Kontakte usw. gebraucht.',
-			'before_widget'	=>	'<aside id="%1$s" class="widget widget-rechts %2$s">',
+			'before_widget'	=>	'<aside id="%1$s" class="widget widget-unten %2$s">',
 			'after_widget'	=>	'</aside>',
 			'before_title'	=>	'<h1 class="bottomline-title">',
 			'after_title'		=>	'</h1>'
@@ -181,7 +169,7 @@ SIDEBAR FUNCTION
 			'id'						=>	'bottomline-2',
 			'class'					=>	'custom-wid',
 			'description'		=>	'Dieses Widget erscheint ganz unten an der Seite und wird für Kontakte usw. gebraucht.',
-			'before_widget'	=>	'<aside id="%1$s" class="widget widget-rechts %2$s">',
+			'before_widget'	=>	'<aside id="%1$s" class="widget widget-unten %2$s">',
 			'after_widget'	=>	'</aside>',
 			'before_title'	=>	'<h1 class="bottomline-title">',
 			'after_title'		=>	'</h1>'
@@ -194,7 +182,7 @@ SIDEBAR FUNCTION
 			'id'						=>	'bottomline-3',
 			'class'					=>	'custom-wid',
 			'description'		=>	'Dieses Widget erscheint ganz unten an der Seite und wird für Kontakte usw. gebraucht.',
-			'before_widget'	=>	'<aside id="%1$s" class="widget widget-rechts %2$s">',
+			'before_widget'	=>	'<aside id="%1$s" class="widget widget-unten %2$s">',
 			'after_widget'	=>	'</aside>',
 			'before_title'	=>	'<h1 class="bottomline-title">',
 			'after_title'		=>	'</h1>'
@@ -207,7 +195,7 @@ SIDEBAR FUNCTION
 			'id'						=>	'bottomline-4',
 			'class'					=>	'custom-wid',
 			'description'		=>	'Dieses Widget erscheint ganz unten an der Seite und wird für Kontakte usw. gebraucht.',
-			'before_widget'	=>	'<aside id="%1$s" class="widget widget-rechts %2$s">',
+			'before_widget'	=>	'<aside id="%1$s" class="widget widget-unten %2$s">',
 			'after_widget'	=>	'</aside>',
 			'before_title'	=>	'<h1 class="bottomline-title">',
 			'after_title'		=>	'</h1>'
@@ -220,7 +208,7 @@ SIDEBAR FUNCTION
 			'id'						=>	'bottomline-5',
 			'class'					=>	'custom-wid',
 			'description'		=>	'Dieses Widget erscheint ganz unten an der Seite und wird für Kontakte usw. gebraucht.',
-			'before_widget'	=>	'<aside id="%1$s" class="widget widget-rechts %2$s">',
+			'before_widget'	=>	'<aside id="%1$s" class="widget widget-unten %2$s">',
 			'after_widget'	=>	'</aside>',
 			'before_title'	=>	'<h1 class="bottomline-title">',
 			'after_title'		=>	'</h1>'
