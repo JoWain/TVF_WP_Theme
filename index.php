@@ -115,7 +115,6 @@
 				<div class="blog-wrapper">
 
 
-
 					<?php
 
 					$tvf_blog_query = new WP_Query( array( 'category_name' => $tvf_page_slug ));
@@ -147,43 +146,49 @@
 				<div class="subpages-wrapper">
 
 
-					<?php
+				<?php
 
 					$tvf_subpages_query = new WP_Query(
 
-					array(
-						'post_type' => 'page' ,
-						'posts_per_page' => -1 ,
-						'post_parent' => $tvf_page_id ,
-						'order' => 'ASC' ,
-						'orderby' => 'menu_order'
-					)
+						array(
+							'post_type' => 'page' ,
+							'posts_per_page' => -1 ,
+							'post_parent' => $tvf_page_id ,
+							'order' => 'ASC' ,
+							'orderby' => 'menu_order'
+						)
 
-				);
+					);
 
-				if ( $tvf_subpages_query->have_posts() ) {
+					if ( $tvf_subpages_query->have_posts() ) {
 
-					while ( $tvf_subpages_query->have_posts() ) { $tvf_subpages_query->the_post();
-						?>
-						<article>
+						while ( $tvf_subpages_query->have_posts() ) { $tvf_subpages_query->the_post();
+							?>
+							<figure class="subpageimage">
 
-							<h1 id="<?php the_ID(); ?>title"><?php the_title(); ?></h1>
-							<p class="subpagecontent"><?php the_content(); ?></p>
+								<?php the_post_thumbnail(); ?>
 
-						</article>
+							</figure>
 
-						<?php
+							<article>
+
+								<h1 id="<?php the_ID(); ?>title"><?php the_title(); ?></h1>
+								<p class="subpagecontent"><?php the_content(); ?></p>
+
+							</article>
+
+							<?php
+						}
+
 					}
 
-				}
-
-				wp_reset_postdata();
+					wp_reset_postdata();
 
 				?>
 
-			</div>
+				</div>
 
-		</div>
+			</div>
 
 			</div>
 			<!-- end page content -->
