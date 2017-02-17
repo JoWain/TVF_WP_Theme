@@ -25,11 +25,11 @@ SCRIPT ENQUEUE
 function tvf_script_enqueue() {
 
 	//	stylesheets enqueue
-	wp_enqueue_style( 'toastgrid' , get_template_directory_uri() . '/css/toast/grid.css', array() , '1.0.0' , 'all' );
+	//wp_enqueue_style( 'toastgrid' , get_template_directory_uri() . '/css/toast/grid.css', array() , '1.0.0' , 'all' );
 	wp_enqueue_style( 'customstyle' , get_template_directory_uri() . '/css/turnverein.css', array() , '1.0.0' , 'all' );
 
 	// javascript enqueue
-	wp_enqueue_script('custom-jquery' , get_template_directory_uri() . '/js/jquery.min.js' , '2.1.4' , true );
+	//wp_enqueue_script('custom-jquery' , get_template_directory_uri() . '/js/jquery.min.js' , '2.1.4' , true );
 
   wp_enqueue_script('customjs' , get_template_directory_uri() . '/js/turnverein.js' , '1.0.0' , true );
 
