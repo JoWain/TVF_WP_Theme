@@ -1,5 +1,7 @@
 //javascript functions
 
+//Scrolling local navigation function
+
 $(window).scroll(function(){
 
   var wScroll = $(this).scrollTop();

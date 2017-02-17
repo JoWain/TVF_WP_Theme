@@ -1,4 +1,4 @@
-
+/*this is what i am working on*/
 html,
 body {
 	margin: 0px;
@@ -316,7 +316,6 @@ PAGE BOTTOM STYLE
 
 .bottomline {
 	background: #333;
-
 	color: white;
 
 	padding-bottom: 30px;
@@ -325,22 +324,31 @@ PAGE BOTTOM STYLE
 
 .contact-area {
 	min-height: 100px;
+	padding: 20px;
 
+	color: #ddd;
 	background-color: #444;
 }
 
 .contact-area h1 {
 
 	font-family: helvetica, sans-serif;
-
-	font-size: 80%;
-
-	font-weight: normal;
+	font-size: 100%;
+	font-weight: lighter;
 
 	text-transform: uppercase;
 
 }
 
+.contact-area a {
+
+	color: #ddd;
+	text-decoration: none;
+
+}
+
 .widget-unten {
+
+
 
 }
