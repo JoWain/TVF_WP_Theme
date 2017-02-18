@@ -1,0 +1,269 @@
+/*
+=========================================
+TURNVEREIN-2.CSS
+=========================================
+-----------------------------------------
+TVF Wordpress styling, no Grid, Flexbox
+-----------------------------------------
+*/
+
+/*
+---------
+Reset CSS
+---------
+
+http://meyerweb.com/eric/tools/css/reset/
+  v2.0 | 20110126
+  License: none (public domain)
+*/
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+
+/*
+--------------------------------------
+font usage (embeded via functions.php)
+--------------------------------------
+
+font-family: 'Abel', sans-serif;
+font-family: 'PT Serif', serif;
+font-family: 'Yanone Kaffeesatz', sans-serif;
+
+*/
+
+/*
+-------------------
+Styling starts here
+-------------------
+*/
+
+/*--General--*/
+
+html,
+body {
+	color: #555;
+	background: #eee;
+	font-family: 'PT Serif', serif;
+	font-size: 15px;
+}
+
+a {
+  font-style: normal;
+  font-weight: 400;
+  text-decoration: none;
+  color: #555;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: 'Helvetica Neue', sans-serif;
+}
+
+.flex-container {
+  display: flex;
+}
+
+/*
+---------------
+Desktop Styling
+---------------
+*/
+
+/*--Navigation--*/
+
+#smallscreen-head {
+  display: none;
+}
+
+#sidetoggler {
+  display: none;
+}
+
+#navi {
+  background-color: #333;
+  position: fixed;
+  width: 100%;
+  top: 0px;
+  z-index: 10;
+}
+
+#navi ul {
+  display: flex;
+  justify-content: space-between;
+}
+
+#navi li {
+  display: flex;
+}
+
+#navi a {
+  font-family: 'Abel', sans-serif;
+  text-transform: uppercase;
+  display: block;
+  padding: 10px 15px;
+  text-decoration: none;
+  color: #eee;
+  background-color: #666;
+  box-sizing: border-box;
+  margin: auto auto;
+}
+
+#navi .current-menu-item a, #navi a:hover {
+  color: #666;
+  background-color: #eee;
+}
+
+/*--Title--*/
+
+#content-wrapper {
+  margin-top: 35px;
+}
+
+#titelbild {
+  height: 200px;
+  background-size: cover;
+  background-position: center top;
+
+  display: flex;
+}
+
+#titelbild .logo {
+
+  color: white;
+  font-size: 700%;
+  font-family: 'Yanone Kaffeesatz', sans-serif;
+  opacity: 0.7;
+
+  margin: auto auto;
+}
+
+#titel-schriftzug {
+  display: flex;
+  background-color: #333;
+}
+
+#titel-schriftzug h1 {
+  display: block;
+  color: #eee;
+
+  font-size: 21px;
+  text-transform: uppercase;
+  padding: 7px;
+  margin: auto auto;
+}
+
+/*--Page Main--*/
+
+.table-of-contents, .widget-area {
+  flex: 1;
+}
+
+.page-content {
+  flex: 3;
+  background-color: #eee;
+
+  display: flex;
+  flex-direction: column;
+}
+
+.page-content :last-child{
+  margin-bottom: 0px;
+}
+
+.box {
+  padding: 20px;
+}
+
+/*->Table of Contents*/
+
+.table-of-contents {
+  display: flex;
+  flex-direction: column;
+}
+
+.table-of-contents a {
+  display: block;
+
+  -ms-transition-duration: 0.1s;
+  -webkit-transition-duration: 0.1s;
+  -o-transition-duration: 0.1s;
+  transition-duration: 0.1s;
+
+  text-transform: uppercase;
+  font-family: 'Abel', sans-serif;
+
+  margin-bottom: 10px;
+
+}
+
+.localnav::before {
+  content: '// ';
+}
+/*->Content*/
+
+.page-content h1 {
+  font-weight: bold;
+  font-size: 180%;
+
+  margin-bottom: 10px;
+}
+
+.page-content h2 {
+  font-weight: normal;
+  font-size: 140%;
+
+  margin-bottom: 10px;
+}
+
+.page-content p {
+  font-size: 100%;
+  line-height: 1.2;
+}
+
+.content-part {
+  flex: 1;
+  margin-bottom: 20px;
+  background-color: white;
+}
+
+/*->Widgets*/
