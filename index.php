@@ -37,8 +37,7 @@
 
 				?>
 
-				<div id="titelbild" style="background-image: url(<?php the_post_thumbnail_url( 'full' ); ?>);
-				">
+				<div id="titelbild" style="background-image: url(<?php the_post_thumbnail_url( 'full' ); ?>);">
 
 					<span class="logo">Logo!</span>
 
@@ -133,9 +132,22 @@
 
 				while ( $tvf_blog_query->have_posts() ) { $tvf_blog_query->the_post();
 					?>
+					<article class="blogpost">
 
-					<h2><?php the_title(); ?></h2>
-					<p><?php the_content(); ?></p>
+						<?php if (has_post_thumbnail()) {
+							echo '<div class="blogpost-image" style="background-image: url(';
+
+							the_post_thumbnail_url( 'large' );
+							echo ');"></div>';
+						} ?>
+
+						<div class="blogpost-text">
+							<h2><?php the_title(); ?></h2>
+							<p><?php the_content(); ?></p>
+							<h3><?php the_author(); ?>, <?php the_date(); ?></h3>
+						</div>
+
+					</article>
 
 					<?php
 				}
@@ -173,16 +185,22 @@
 
 						<div class="content-part">
 
-							<figure class="subpageimage">
+							<article class="subpage">
 
-								<?php the_post_thumbnail(); ?>
+								<?php if (has_post_thumbnail()) {
+									echo '<div class="subpage-image" style="background-image: url(';
 
-							</figure>
+									the_post_thumbnail_url( 'large' );
 
-							<article>
+									echo ');"></div>';
+								} ?>
 
-								<h1 id="<?php the_ID(); ?>title"><?php the_title(); ?></h1>
-								<p class="subpagecontent"><?php the_content(); ?></p>
+								<div class="subpage-text">
+
+									<h1 id="<?php the_ID(); ?>title"><?php the_title(); ?></h1>
+									<p class="subpagecontent"><?php the_content(); ?></p>
+
+								</div>
 
 							</article>
 

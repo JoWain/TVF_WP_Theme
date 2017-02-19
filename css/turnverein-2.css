@@ -103,6 +103,13 @@ h1, h2, h3, h4, h5, h6 {
   display: flex;
 }
 
+em, i {
+  font-style: italic;
+}
+
+strong, b {
+  font-weight: bold;
+}
 /*
 ---------------
 Desktop Styling
@@ -129,7 +136,7 @@ Desktop Styling
 
 #navi ul {
   display: flex;
-  justify-content: space-between;
+  justify-content: space-around;
 }
 
 #navi li {
@@ -180,6 +187,8 @@ Desktop Styling
 #titel-schriftzug {
   display: flex;
   background-color: #333;
+
+  margin-bottom: 20px;
 }
 
 #titel-schriftzug h1 {
@@ -245,7 +254,7 @@ Desktop Styling
   font-weight: bold;
   font-size: 180%;
 
-  margin-bottom: 10px;
+  margin-bottom: 20px;
 }
 
 .page-content h2 {
@@ -255,15 +264,93 @@ Desktop Styling
   margin-bottom: 10px;
 }
 
+.page-content h3 {
+  font-weight: normal;
+  font-size: 100%;
+  font-style: italic;
+
+  display: inline;
+
+  margin-bottom: 10px;
+}
+
 .page-content p {
   font-size: 100%;
-  line-height: 1.2;
+  line-height: 1.5;
+
+  margin-bottom: 10px;
 }
 
 .content-part {
   flex: 1;
-  margin-bottom: 20px;
-  background-color: white;
+  margin-bottom: 40px;
 }
 
+.page-content a {
+  color: #111;
+}
+/*->Blog*/
+
+.blogpost {
+  display: flex;
+}
+
+.blogpost-image {
+  flex: 1;
+  background-size: cover;
+  background-position: center center;
+  margin-right: 15px;
+}
+
+.blogpost-text {
+  flex: 2;
+}
+
+/*->Subpages*/
+
+.subpage {
+  display: flex;
+  flex-direction: column;
+}
+
+.subpage-image {
+  flex: 1;
+  background-size: cover;
+  background-position: center top;
+  order: 2;
+  min-height: 100px;
+}
+
+.subpage-text {
+  flex: 2;
+  order: 1;
+}
+
+/*->Subpage-Calendar (Simple Calendar Plugin)*/
+
+.subpage .simcal-day {
+  margin-bottom: 15px;
+}
+
+.subpage .simcal-event-details {
+  display: flex;
+  align-items: baseline;
+}
+
+.calendar-date {
+  flex: 1;
+}
+
+.calendar-info {
+  flex: 2;
+}
+
+.subpage .simcal-event-start-date {
+
+}
+
+.subpage .simcal-event-title {
+  font-weight: bold;
+  font-size: 120%;
+}
 /*->Widgets*/

@@ -24,7 +24,8 @@ FONT ENQUEUE
 
 function wpb_add_google_fonts() {
 
-wp_enqueue_style( 'wpb-google-fonts', 'https://fonts.googleapis.com/css?family=Abel|Yanone+Kaffeesatz:300,400|PT+Serif', false );
+	wp_enqueue_style( 'wpb-google-fonts', 'https://fonts.googleapis.com/css?family=Abel|Yanone+Kaffeesatz:300,400|PT+Serif', false );
+
 }
 
 add_action( 'wp_enqueue_scripts', 'wpb_add_google_fonts' );
@@ -57,8 +58,25 @@ THEME SUPPORT
 ===============
 */
 
-add_theme_support( 'post-thumbnails' );
-add_theme_support( 'page-thumbnails' );
+function tvf_sup_setup() {
+
+	add_theme_support( 'post-thumbnails' );
+	add_theme_support( 'page-thumbnails' );
+
+	add_image_size( 'personen-portrait' , 120 , 120 , array( 'center' , 'center' ) );
+
+
+}
+
+add_action('after_setup_theme', 'tvf_sup_setup' );
+
+add_filter( 'image_size_names_choose', 'custom_image_sizes_choose' );
+function custom_image_sizes_choose( $sizes ) {
+    $custom_sizes = array(
+        'personen-portrait' => 'Portrait Person'
+    );
+    return array_merge( $sizes, $custom_sizes );
+}
 
 /*
 ==================
