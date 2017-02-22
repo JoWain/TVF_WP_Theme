@@ -39,7 +39,11 @@
 
 				<div id="titelbild" style="background-image: url(<?php the_post_thumbnail_url( 'full' ); ?>);">
 
-					<span class="logo">Logo!</span>
+					<span class="logo">
+
+						<?php get_template_part( 'logos/logo' , $tvf_page_slug ); ?>
+
+					</span>
 
 				</div>
 
