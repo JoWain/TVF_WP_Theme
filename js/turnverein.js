@@ -1,6 +1,6 @@
 //javascript functions
 
-//Scrolling local navigation function
+//Scrolling local navigation function and fading logos function
 
 $(window).scroll(function(){
 

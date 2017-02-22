@@ -41,7 +41,9 @@
 
 					<span class="logo">
 
-						<?php get_template_part( 'logos/logo' , $tvf_page_slug ); ?>
+						<?php
+							get_template_part( 'logos/logo' , $tvf_page_slug );
+						?>
 
 					</span>
 

@@ -1,9 +1,9 @@
 <?php
 
 /*
-===================================
-MENU SETUP and Removing Image sizes
-===================================
+=====================
+MENU SETUP
+=====================
 */
 
 function tvf_ns_theme_setup() {
@@ -11,9 +11,6 @@ function tvf_ns_theme_setup() {
 	add_theme_support( 'menus' );
 
 	register_nav_menu( 'primary' , 'Hauptnavigation unter dem Titelbild' );
-
-	remove_image_size( 'medium' );
-	remove_image_size( 'thumbnail' );
 
 	}
 
@@ -42,7 +39,6 @@ SCRIPT ENQUEUE
 function tvf_script_enqueue() {
 
 	//	stylesheets enqueue
-	//wp_enqueue_style( 'toastgrid' , get_template_directory_uri() . '/css/toast/grid.css', array() , '1.0.0' , 'all' );
 
 	wp_enqueue_style( 'customstyle' , get_template_directory_uri() . '/css/turnverein-2.css', array() , '1.0.0' , 'all' );
 
@@ -56,12 +52,12 @@ function tvf_script_enqueue() {
 add_action( 'wp_enqueue_scripts' , 'tvf_script_enqueue' );
 
 /*
-===============
-THEME SUPPORT
-===============
+======================
+IMAGES SETUP
+======================
 */
 
-function tvf_sup_setup() {
+function tvf_img_setup() {
 
 	add_theme_support( 'post-thumbnails' );
 	add_theme_support( 'page-thumbnails' );
@@ -70,10 +66,12 @@ function tvf_sup_setup() {
 
 	add_image_size( 'vollbild' , 1000 );
 
+	remove_image_size( 'medium' );
+	remove_image_size( 'thumbnail' );
 
 }
 
-add_action('after_setup_theme', 'tvf_sup_setup' );
+add_action( 'after_setup_theme', 'tvf_img_setup' );
 
 add_filter( 'image_size_names_choose', 'custom_image_sizes_choose' );
 function custom_image_sizes_choose( $sizes ) {
@@ -86,12 +84,11 @@ function custom_image_sizes_choose( $sizes ) {
 
 /*
 ==================
-SIDEBAR FUNCTION
+WIDGETS SETUP
 ==================
 */
 
  function tvf_widget_setup() {
-
 
 	register_sidebar(
 			array(
@@ -190,10 +187,10 @@ SIDEBAR FUNCTION
 
 	register_sidebar(
 			array(
-			'name'					=>	'Seitenende Feld 1',
+			'name'					=>	'Seitenende 1. Zeile',
 			'id'						=>	'bottomline-1',
 			'class'					=>	'custom-wid',
-			'description'		=>	'Dieses Widget erscheint ganz unten an der Seite und wird für Kontakte usw. gebraucht.',
+			'description'		=>	'Die hier eingesetzten Widgets erscheinen als Kacheln in der ersten Zeile ganz unten.',
 			'before_widget'	=>	'<aside id="%1$s" class="widget widget-unten %2$s">',
 			'after_widget'	=>	'</aside>',
 			'before_title'	=>	'<h1 class="bottomline-title">',
@@ -203,10 +200,10 @@ SIDEBAR FUNCTION
 
 	register_sidebar(
 			array(
-			'name'					=>	'Seitenende Feld 2',
+			'name'					=>	'Seitenende 2. Zeile',
 			'id'						=>	'bottomline-2',
 			'class'					=>	'custom-wid',
-			'description'		=>	'Dieses Widget erscheint ganz unten an der Seite und wird für Kontakte usw. gebraucht.',
+			'description'		=>	'Die hier eingesetzten Widgets erscheinen als Kacheln in der zweiten Zeile ganz unten.',
 			'before_widget'	=>	'<aside id="%1$s" class="widget widget-unten %2$s">',
 			'after_widget'	=>	'</aside>',
 			'before_title'	=>	'<h1 class="bottomline-title">',
@@ -214,49 +211,9 @@ SIDEBAR FUNCTION
 		)
 	);
 
-	// register_sidebar(
-	// 		array(
-	// 		'name'					=>	'Seitenende Feld 3',
-	// 		'id'						=>	'bottomline-3',
-	// 		'class'					=>	'custom-wid',
-	// 		'description'		=>	'Dieses Widget erscheint ganz unten an der Seite und wird für Kontakte usw. gebraucht.',
-	// 		'before_widget'	=>	'<aside id="%1$s" class="widget widget-unten %2$s">',
-	// 		'after_widget'	=>	'</aside>',
-	// 		'before_title'	=>	'<h1 class="bottomline-title">',
-	// 		'after_title'		=>	'</h1>'
-	// 	)
-	// );
-	//
-	// register_sidebar(
-	// 		array(
-	// 		'name'					=>	'Seitenende Feld 4',
-	// 		'id'						=>	'bottomline-4',
-	// 		'class'					=>	'custom-wid',
-	// 		'description'		=>	'Dieses Widget erscheint ganz unten an der Seite und wird für Kontakte usw. gebraucht.',
-	// 		'before_widget'	=>	'<aside id="%1$s" class="widget widget-unten %2$s">',
-	// 		'after_widget'	=>	'</aside>',
-	// 		'before_title'	=>	'<h1 class="bottomline-title">',
-	// 		'after_title'		=>	'</h1>'
-	// 	)
-	// );
-	//
-	// register_sidebar(
-	// 		array(
-	// 		'name'					=>	'Seitenende Feld 5',
-	// 		'id'						=>	'bottomline-5',
-	// 		'class'					=>	'custom-wid',
-	// 		'description'		=>	'Dieses Widget erscheint ganz unten an der Seite und wird für Kontakte usw. gebraucht.',
-	// 		'before_widget'	=>	'<aside id="%1$s" class="widget widget-unten %2$s">',
-	// 		'after_widget'	=>	'</aside>',
-	// 		'before_title'	=>	'<h1 class="bottomline-title">',
-	// 		'after_title'		=>	'</h1>'
-	// 	)
-	// );
-
 
  }
 
 add_action( 'widgets_init' , 'tvf_widget_setup' );
-
 
 ?>

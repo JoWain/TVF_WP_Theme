@@ -175,7 +175,7 @@ Desktop Styling
   font-size: 700%;
   font-family: 'Yanone Kaffeesatz', sans-serif;
 
-	/*keep opacity ajusted to var opacityDefault in turnverein.js*/
+	opacity: 0.75; /*opacity is determined by var opacityDefault in turnverein.js*/
 
   margin: auto auto;
 
