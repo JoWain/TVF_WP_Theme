@@ -139,10 +139,6 @@ Desktop Styling
   justify-content: space-around;
 }
 
-#navi li {
-  display: flex;
-}
-
 #navi a {
   font-family: 'Abel', sans-serif;
   text-transform: uppercase;
@@ -152,7 +148,6 @@ Desktop Styling
   color: #eee;
   background-color: #666;
   box-sizing: border-box;
-  margin: auto auto;
 }
 
 #navi .current-menu-item a, #navi a:hover {
@@ -262,14 +257,14 @@ Desktop Styling
   font-size: 140%;
 
   margin-bottom: 10px;
+
+	clear: both;
 }
 
 .page-content h3 {
   font-weight: normal;
   font-size: 100%;
   font-style: italic;
-
-  display: inline;
 
   margin-bottom: 10px;
 }
@@ -319,11 +314,26 @@ Desktop Styling
   background-position: center top;
   order: 2;
   min-height: 100px;
+
+	margin-top: 15px;
 }
 
 .subpage-text {
   flex: 2;
   order: 1;
+}
+
+.subpagecontent p {
+	overflow: auto;
+}
+
+.subpagecontent .alignleft {
+	float: left;
+}
+
+.subpagecontent .size-vollbild {
+	width: 100%;
+	height: auto;
 }
 
 /*->Subpage-Calendar (Simple Calendar Plugin)*/
@@ -354,3 +364,205 @@ Desktop Styling
   font-size: 120%;
 }
 /*->Widgets*/
+
+
+.widget-area h1 {
+  font-weight: bold;
+  font-size: 120%;
+
+  margin-bottom: 20px;
+}
+
+.widget-area h2 {
+  font-weight: normal;
+  font-size: 100%;
+
+  margin-bottom: 10px;
+
+	clear: both;
+}
+
+.widget-area h3 {
+  font-weight: normal;
+  font-size: 80%;
+  font-style: italic;
+
+  margin-bottom: 10px;
+}
+
+.widget-area {
+	font-family: 'Helvetica Neue', sans-serif;
+}
+
+/*Widget-Calendar (Simple Calendar Plugin)*/
+
+.widget-area .simcal-event-title {
+	font-weight: bold;
+	display: block;
+	margin-bottom: 5px;
+}
+
+.widget-area .simcal-event-start-date {
+	font-size: 90%;
+	display: block;
+	margin-bottom: 5px;
+}
+
+.widget-area .simcal-event-start-location {
+	font-size: 90%;
+	margin-bottom: 5px;
+}
+
+.widget-area .simcal-event-start-time {
+	font-size: 90%;
+	margin-bottom: 5px;
+}
+
+
+/*--Bottomline--*/
+
+#page-bottom {
+	display: flex;
+	flex-direction: column;
+
+	background-color: #333;
+	margin-top: 50px;
+	padding-top: 20px;
+}
+
+.contact-area {
+	display: flex;
+
+	font-family: 'Helvetica Neue', sans-serif;
+	font-size: 90%;
+}
+
+.widget-unten {
+	flex: 1;
+
+	margin: 10px;
+	background-color: #666;
+	color: #eee;
+
+	padding: 15px;
+}
+
+.widget-unten a {
+	color: #ddd;
+}
+
+.widget-unten h1 {
+	font-weight: bold;
+	margin-bottom: 5px;
+}
+
+
+/*
+--------------
+Mobile Styling
+--------------
+*/
+
+@media ( max-width: 900px ) {
+
+	/*--Table of contents--*/
+
+	.table-of-contents {
+		display: none;
+	}
+
+}
+
+@media ( max-width: 800px ) {
+
+	/*--Navigation--*/
+
+	#smallscreen-head {
+		display: block;
+		width: 100%;
+		position: fixed;
+		top: 0px;
+		z-index: 11;
+		padding: 5px;
+
+		background-color: rgba(0, 0, 0, 0);
+	}
+
+	#smallscreen-head label {
+		font-size: 300%;
+		padding: 10px 20px;
+		border-radius: 5px;
+		margin-left: 10px;
+
+		background-color: #eee;
+
+		border-color: #333;
+		border-style: solid;
+		border-width: medium;
+	}
+
+	#content-wrapper {
+	  margin-top: 0px;
+	}
+
+	#navi {
+
+	}
+
+	#navi ul {
+		margin-top: 80px;
+		flex-direction: column;
+		width: 70%;
+	}
+
+	#navi a {
+		margin-top: 20px;
+		font-size: 180%;
+	}
+
+	.menu-hauptmenue-container {
+		width: 100%;
+		height: 100%;
+		position: fixed;
+		top: 0px;
+		left: 0px;
+
+		background-color: rgba(0, 0, 0, 0);
+
+		-ms-transform: translateX( -100% );
+		-webkit-transform: translateX( -100% );
+		-o-transform: translateX( -100% );
+		transform: translateX( -100% );
+
+		-ms-transition-duration: 0.5s;
+		-webkit-transition-duration: 0.5s;
+		-o-transition-duration: 0.5s;
+		transition-duration: 0.5s;
+	}
+
+	#sidetoggler:checked + .menu-hauptmenue-container {
+		-ms-transform: translateX( 0px );
+		-webkit-transform: translateX( 0px );
+		-o-transform: translateX( 0px );
+		transform: translateX( 0px );
+
+		background-color: rgba(0, 0, 0, 0.7);
+	}
+
+	/*--Widgets rechts--*/
+
+	.widget-area {
+		display: none;
+	}
+
+}
+
+/*--Widgets unten--*/
+
+@media ( max-width: 640px ) {
+
+	.contact-area {
+		flex-direction: column;
+	}
+
+}

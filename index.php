@@ -198,7 +198,8 @@
 								<div class="subpage-text">
 
 									<h1 id="<?php the_ID(); ?>title"><?php the_title(); ?></h1>
-									<p class="subpagecontent"><?php the_content(); ?></p>
+									<div class="subpagecontent"> 				<?php the_content(); ?>
+									</div>
 
 								</div>
 
@@ -269,64 +270,17 @@
 
 	<div id="page-bottom" class="bottomline">
 
-		<div class="flex-container">
+		<div class="contact-area">
 
-			<div class="grid">
-
-				<div class="grid__col grid__col--1-of-5">
-
-					<div class="contact-area">
-
-						<?php dynamic_sidebar('bottomline-1'); ?>
-
-					</div>
-
-				</div>
-
-				<div class="grid__col grid__col--1-of-5">
-
-					<div class="contact-area">
-
-						<?php dynamic_sidebar('bottomline-2'); ?>
-
-					</div>
-
-				</div>
-
-				<div class="grid__col grid__col--1-of-5">
-
-					<div class="contact-area">
-
-						<?php dynamic_sidebar('bottomline-3'); ?>
-
-					</div>
-
-				</div>
-
-				<div class="grid__col grid__col--1-of-5">
-
-					<div class="contact-area">
-
-						<?php dynamic_sidebar('bottomline-4'); ?>
-
-					</div>
-
-				</div>
-
-				<div class="grid__col grid__col--1-of-5">
-
-					<div class="contact-area">
-
-						<?php dynamic_sidebar('bottomline-5'); ?>
-
-					</div>
-
-				</div>
-
-			</div>
+			<?php dynamic_sidebar('bottomline-1'); ?>
 
 		</div>
-		<!-- end grid container 2 -->
+
+		<div class="contact-area">
+
+			<?php dynamic_sidebar('bottomline-2'); ?>
+
+		</div>
 
 	</div>
 	<!-- end page-bottom -->

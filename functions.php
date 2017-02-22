@@ -1,9 +1,9 @@
 <?php
 
 /*
-=====================
-MENU SETUP
-=====================
+===================================
+MENU SETUP and Removing Image sizes
+===================================
 */
 
 function tvf_ns_theme_setup() {
@@ -11,6 +11,9 @@ function tvf_ns_theme_setup() {
 	add_theme_support( 'menus' );
 
 	register_nav_menu( 'primary' , 'Hauptnavigation unter dem Titelbild' );
+
+	remove_image_size( 'medium' );
+	remove_image_size( 'thumbnail' );
 
 	}
 
@@ -63,7 +66,9 @@ function tvf_sup_setup() {
 	add_theme_support( 'post-thumbnails' );
 	add_theme_support( 'page-thumbnails' );
 
-	add_image_size( 'personen-portrait' , 120 , 120 , array( 'center' , 'center' ) );
+	add_image_size( 'personen-portrait' , 250 , 250 , array( 'center' , 'center' ) );
+
+	add_image_size( 'vollbild' , 1000 );
 
 
 }
@@ -73,7 +78,8 @@ add_action('after_setup_theme', 'tvf_sup_setup' );
 add_filter( 'image_size_names_choose', 'custom_image_sizes_choose' );
 function custom_image_sizes_choose( $sizes ) {
     $custom_sizes = array(
-        'personen-portrait' => 'Portrait Person'
+        'personen-portrait' => 'Portrait Person' ,
+				'vollbild' => 'Ganze Breite'
     );
     return array_merge( $sizes, $custom_sizes );
 }
