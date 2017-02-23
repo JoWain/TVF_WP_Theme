@@ -124,7 +124,12 @@
 
 			<?php
 
-			$tvf_blog_query = new WP_Query( array( 'category_name' => $tvf_page_slug ));
+			$tvf_blog_query = new WP_Query( array(
+				'category_name' => $tvf_page_slug,
+				'posts_per_page' => 3,
+				'nopaging' => true
+				)
+			);
 
 			if ( $tvf_blog_query->have_posts() ) {
 

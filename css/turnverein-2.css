@@ -261,7 +261,8 @@ Desktop Styling
   font-weight: normal;
   font-size: 140%;
 
-  margin-bottom: 10px;
+	margin-top: 20px;
+  margin-bottom: 20px;
 
 	clear: both;
 }
@@ -271,7 +272,8 @@ Desktop Styling
   font-size: 100%;
   font-style: italic;
 
-  margin-bottom: 10px;
+	margin-top: 20px;
+  margin-bottom: 20px;
 }
 
 .page-content p {
@@ -293,6 +295,7 @@ Desktop Styling
 
 .blogpost {
   display: flex;
+	margin-bottom: 30px;
 }
 
 .blogpost-image {
@@ -304,6 +307,11 @@ Desktop Styling
 
 .blogpost-text {
   flex: 2;
+}
+
+.blogpost-text h2 {
+	margin-top: 0px;
+	margin-bottom: 10px;
 }
 
 /*->Subpages*/
@@ -343,7 +351,12 @@ Desktop Styling
 
 /*->Subpage-Calendar (Simple Calendar Plugin)*/
 
-.subpage .simcal-day {
+.subpage .simcal-calendar {
+	margin-top: 20px;
+	margin-bottom: 20px;
+}
+
+.subpage .simcal-event {
   margin-bottom: 15px;
 }
 
@@ -366,7 +379,7 @@ Desktop Styling
 
 .subpage .simcal-event-title {
   font-weight: bold;
-  font-size: 120%;
+	line-height: 1.5;
 }
 /*->Widgets*/
 
