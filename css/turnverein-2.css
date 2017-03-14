@@ -283,6 +283,11 @@ Desktop Styling
   margin-bottom: 10px;
 }
 
+.page-content .size-vollbild , .page-content .size-large {
+	width: 100%;
+	height: auto;
+}
+
 .content-part {
   flex: 1;
   margin-bottom: 40px;
@@ -344,11 +349,6 @@ Desktop Styling
 	float: left;
 }
 
-.subpagecontent .size-vollbild {
-	width: 100%;
-	height: auto;
-}
-
 /*->Subpage-Calendar (Simple Calendar Plugin)*/
 
 .subpage .simcal-calendar {
@@ -367,10 +367,12 @@ Desktop Styling
 
 .calendar-date {
   flex: 1;
+	line-height: 1.5;
 }
 
 .calendar-info {
   flex: 2;
+	line-height: 1.5;
 }
 
 .subpage .simcal-event-start-date {
@@ -379,7 +381,6 @@ Desktop Styling
 
 .subpage .simcal-event-title {
   font-weight: bold;
-	line-height: 1.5;
 }
 /*->Widgets*/
 
@@ -414,25 +415,32 @@ Desktop Styling
 
 /*Widget-Calendar (Simple Calendar Plugin)*/
 
+.widget-area .simcal-events {
+	font-size: 90%;
+}
+
 .widget-area .simcal-event-title {
+	font-size: 100%;
 	font-weight: bold;
 	display: block;
 	margin-bottom: 5px;
 }
 
 .widget-area .simcal-event-start-date {
-	font-size: 90%;
+	display: block;
+	margin-bottom: 5px;
+}
+
+.widget-area .simcal-event-end-date {
 	display: block;
 	margin-bottom: 5px;
 }
 
 .widget-area .simcal-event-start-location {
-	font-size: 90%;
 	margin-bottom: 5px;
 }
 
 .widget-area .simcal-event-start-time {
-	font-size: 90%;
 	margin-bottom: 5px;
 }
 
