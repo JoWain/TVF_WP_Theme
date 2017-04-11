@@ -283,7 +283,12 @@ Desktop Styling
   margin-bottom: 10px;
 }
 
-.page-content .size-vollbild , .page-content .size-large {
+.size-vollbild{
+	width: 100%;
+	height: auto;
+}
+
+.size-large {
 	width: 100%;
 	height: auto;
 }
