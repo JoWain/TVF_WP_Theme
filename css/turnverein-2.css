@@ -283,7 +283,11 @@ Desktop Styling
   margin-bottom: 10px;
 }
 
-.size-vollbild{
+.wp-caption {
+	width: 100%;
+}
+
+.size-vollbild {
 	width: 100%;
 	height: auto;
 }
