@@ -2,11 +2,11 @@
 
 <body <?php body_class(); ?> >
 
-	<div id="smallscreen-head">
+	<div id="smallscreen-head" class="sticky-header">
 		<label for="sidetoggler" class="toggle">☰</label>
 	</div>
 
-	<div id="navi">
+	<div id="navi" class="sticky-header">
 
 		<input type="checkbox" id="sidetoggler">
 
@@ -136,7 +136,7 @@
 					array(
 					'category_name' => $tvf_page_slug,
 					'posts_per_page' => 3,
-					'nopaging' => true
+					'nopaging' => false
 					)
 
 				);
